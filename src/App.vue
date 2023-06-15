@@ -5,6 +5,7 @@ export default{
   data(){
     return{
       projects: [],
+      imgLink : "http://localhost:8000/storage/"
     }
   },
   mounted(){
@@ -32,7 +33,7 @@ export default{
     <div class="row">
       <div v-for="project in projects" class="col-md-6 col-xl-4 col-sm-12 d-flex justify-content-center ">
         <div class="card mb-3" style="width: 18rem;">
-          <img v-if="project.image !== null " class="card-img-top" :src="project.image" :alt="project.title">
+          <img v-if="project.image !== null " class="card-img-top" :src="`${imgLink}${project.image}`" :alt="project.title">
           <div class="card-body">
             <h5 class="card-title">{{project.title}}</h5>
             <p class="card-text">{{ project.description }}</p>
