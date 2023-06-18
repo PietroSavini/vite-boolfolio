@@ -4,6 +4,7 @@ export default{
     props:{
         project: Object
     },
+    
     data(){
         return{
             imgLink: "http://localhost:8000/storage/",
@@ -20,7 +21,7 @@ export default{
     <div class="card-body">
         <h5 class="card-title">{{project.title}}</h5>
         <p class="card-text">{{ project.description }}</p>
-        <a href="#" class="btn btn-primary">vedi progetto</a>
+        <router-link  :to="{name:'singleProject', params:{slug: project.slug}}" class="btn btn-primary">vedi progetto</router-link>
     </div>
 </div>
 
