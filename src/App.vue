@@ -40,8 +40,6 @@ export default{
   <main>
     <div class="container py-4">
       <div class="row">
-        <p>totale progetti: {{ totalProjects }}</p>
-        <span>pagina: {{ currentPage }}</span>
         <div v-for="project in projects" class="col-md-6 col-xl-4 col-sm-12 d-flex justify-content-center">
           <Card :project="project"/>
         </div>
