@@ -17,10 +17,10 @@ export default{
         </div>
         <ul class="">
             <li >
-            <a  href="#">Home</a>
+            <routerLink :to="{name:'home'}" href="#">Home</routerLink>
             </li>
             <li >
-            <a  href="#">Projects</a>
+            <router-link :to="{name:'projects'}"  href="#">Projects</router-link>
             </li>
         </ul>
     </div>
