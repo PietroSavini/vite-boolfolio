@@ -16,7 +16,7 @@ export default{
     methods: {
         getProjects() {
             axios.get(`${this.dbUrl}/api/projects`).then((resp) => {
-                this.projects = resp.data.results;
+                this.projects = resp.data.results.data;
                 console.log(this.projects);
             });
         }
