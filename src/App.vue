@@ -49,11 +49,12 @@ export default{
       <!-- pagination -->
       <nav v-if="lastPage" aria-label="Page navigation example" class=" d-flex justify-content-center">
         <ul class="pagination">
-          <li class="page-item"><a  @click.prevent="getProjects(currentPage - 1)"  class="page-link" href="#">Previous</a></li>
-          <li v-for="pageNum in lastPage" class="page-item" :class="{ 'active': pageNum === currentPage }" ><a class="page-link" href="#">{{pageNum}}</a></li>
-          <li class="page-item"><a  @click.prevent="getProjects(currentPage + 1)" class="page-link" href="#">Next</a></li>
+          <li :class="{'disabled' : currentPage === 1}" class="page-item"><a  @click.prevent="getProjects(currentPage - 1)"  class="page-link" href="#">Previous</a></li>
+          <li v-for="pageNum in lastPage" class="page-item" :class="{ 'active': pageNum === currentPage }" ><a  @click.prevent="getProjects(pageNum)"  class="page-link" href="#">{{pageNum}}</a></li>
+          <li :class="{'disabled' : currentPage === lastPage}" class="page-item"><a  @click.prevent="getProjects(currentPage + 1)" class="page-link" href="#">Next</a></li>
         </ul>
       </nav>
+      <!-- /pagination -->
     </div>
   </main>
   
