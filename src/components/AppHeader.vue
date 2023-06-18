@@ -33,7 +33,8 @@ ul{
     margin: 0;
     li{
     display: inline-block;
-    margin-right:10px ;
+    margin-right:15px ;
+
         a{
             text-decoration: none;
             color: inherit;
